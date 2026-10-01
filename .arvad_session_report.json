@@ -3,24 +3,20 @@
   "files_modified": ["index.html", "app.js"],
   "decisions": [
     {
-      "what": "Replaced existing #gallery section with new CSS Grid gallery featuring 8 Unsplash fashion images",
-      "why": "The existing gallery section (id='gallery') used dark brand theme placeholders without real images. The spec required a new gallery with bg-gray-50, CSS Grid with col-span/row-span variations, skeleton loaders with data-skeleton attribute, and actual Unsplash image URLs."
+      "what": "Replaced existing dark-themed #story section with new alternating image-text layout",
+      "why": "Spec required py-24 bg-white classes, 'Our Story' h2, two article subsections with Unsplash lifestyle images, and descriptive copy — entirely different from the existing dark-themed story section"
     },
     {
-      "what": "Applied col-span-2 row-span-2 to items 1 and 5, col-span-2 to item 3",
-      "why": "Spec explicitly calls out these span overrides for visual interest in the grid layout."
+      "what": "Added aria-labelledby to new story section pointing to h2#story-heading",
+      "why": "Semantic HTML best practice consistent with all other sections on the page; spec requires semantic HTML"
     },
     {
-      "what": "Used loading='eager' for items 1-2, loading='lazy' for items 3-8",
-      "why": "Spec requires eager loading for first two items and lazy loading for the rest to improve perceived performance on mobile connections."
+      "what": "Used data-skeleton attribute on skeleton divs in story images",
+      "why": "Matches the gallery section pattern so hideSkeleton/showSkeletonError handlers in app.js work correctly via container.querySelector('[data-skeleton]')"
     },
     {
-      "what": "Appended gallery skeleton handler to app.js after existing mobile menu code with clear section comment",
-      "why": "Spec says to append functionality and use clear comments to separate gallery logic from navigation logic."
-    },
-    {
-      "what": "Added IntersectionObserver in app.js as optional enhancement for viewport-aware lazy loading",
-      "why": "Spec explicitly mentions IntersectionObserver as an optional enhancement for lazy loading optimization."
+      "what": "Extended querySelectorAll selector in app.js from '#gallery img' to '#gallery img, #story img'",
+      "why": "Spec required extending the handler to cover brand story images without duplicating code; compound selector is the minimal change"
     }
   ],
   "tools_used": ["Read", "Edit", "Write"]

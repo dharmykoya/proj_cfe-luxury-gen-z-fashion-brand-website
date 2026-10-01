@@ -1,15 +1,23 @@
 {
   "files_created": [],
-  "files_modified": ["index.html", "app.js"],
+  "files_modified": ["index.html"],
   "decisions": [
     {
-      "what": "Added data-reveal attributes and initial animation classes (opacity-0 translate-y-8 transition-all duration-500 ease-out) to gallery h2, 8 gallery item divs (data-delay 0-700ms), brand story h2, 2 brand story articles (data-delay 0/100ms), and footer columns in both footers (data-delay 0/100/200ms).",
-      "why": "Spec required these exact elements to receive data-reveal and hidden initial state classes, to be toggled by the JavaScript Intersection Observer on scroll."
+      "what": "Replaced transition-transform/transition-colors with transition-all duration-200 on CTA buttons",
+      "why": "Avoids duplicate/conflicting transition utilities while enabling the full set of morphing interaction classes"
     },
     {
-      "what": "Added scroll reveal functionality to app.js inside a DOMContentLoaded listener: prefers-reduced-motion guard, IntersectionObserver with threshold 0.2 and rootMargin '0px 0px -20% 0px', class swap (opacity-0/translate-y-8 removed, opacity-100/translate-y-0 added), setTimeout stagger via data-delay attribute, and unobserve after reveal.",
-      "why": "Spec explicitly required these parameters, behaviors, and initialization timing."
+      "what": "Added hover:scale-105 active:scale-98 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer to all four CTAs",
+      "why": "Specified in the code change description for premium micro-interaction feedback on all CTA elements"
+    },
+    {
+      "what": "Added hover:bg-gray-50 only to the hero CTA (white button)",
+      "why": "Spec explicitly targets the white hero button for this specific hover color enhancement"
+    },
+    {
+      "what": "Did not add type='button' to anchor tag CTAs",
+      "why": "type attribute is not valid on anchor elements; the subscribe button already has type='submit'"
     }
   ],
-  "tools_used": ["Read", "Write", "Bash"]
+  "tools_used": ["Read", "Edit"]
 }

@@ -1,56 +1,19 @@
 {
-  "files_created": [
-    ".gitignore",
-    "README.md",
-    "LICENSE",
-    "index.html"
-  ],
-  "files_modified": [],
+  "files_created": [],
+  "files_modified": ["index.html"],
   "decisions": [
     {
-      "what": "Overwrote existing .gitignore with full HTML/CSS/JS-appropriate ignore rules",
-      "why": "The existing .gitignore only had 'arvad_task_files/' entry; spec required comprehensive OS, IDE, node_modules, build, env, log, and temp file exclusions"
+      "what": "Replaced gradient placeholder hero with full-bleed Unsplash photography hero using h-screen, absolute-positioned img with object-cover, gradient overlay (bg-gradient-to-t from-black/60 via-black/20 to-transparent), and bottom-anchored content container with h1/p/CTA button",
+      "why": "Specification required h-screen, the Unsplash URL, specific gradient overlay classes, content positioned at bottom, and specific typography/button classes"
     },
     {
-      "what": "Overwrote existing README.md with comprehensive project documentation",
-      "why": "The existing README.md was a stub; spec required full documentation including tech stack table, features list, setup instructions, project structure, deployment guide, design principles, and contributing guidelines"
+      "what": "Added skeleton loader div (absolute inset-0 bg-gray-200 animate-pulse) with JavaScript to hide it once the hero img fires load/error",
+      "why": "Specification required a skeleton loading state hidden via JavaScript once image loads"
     },
     {
-      "what": "Created LICENSE with MIT License text using year 2026",
-      "why": "Spec requested standard MIT License; used current year (2026) as specified and a descriptive copyright holder name matching the project"
-    },
-    {
-      "what": "Applied dark luxury color palette (#0a0a0a background, #c9a96e gold accent)",
-      "why": "Spec calls for a Luxury Gen-Z fashion brand; dark premium aesthetic aligns with photography_centric and minimalist_typography design patterns from 000_landing_page_design_rules.md"
-    },
-    {
-      "what": "Used Tailwind CDN v3.x with inline tailwind.config for custom tokens",
-      "why": "Spec explicitly requires Tailwind CSS CDN v3.x from cdn.tailwindcss.com; custom config allows brand colors and keyframes without a build step"
-    },
-    {
-      "what": "Implemented scroll-triggered reveals via Intersection Observer",
-      "why": "scroll_triggered_reveals is a selected design pattern; Intersection Observer is a native, zero-dependency approach consistent with the plain HTML/CSS/JS project structure"
-    },
-    {
-      "what": "Added skeleton loading CSS animation on gallery/product card placeholders",
-      "why": "skeleton_loading is a selected design pattern; improves perceived performance for image-heavy sections on mobile connections"
-    },
-    {
-      "what": "Implemented morphing button interactions with CSS ::after overlay and letter-spacing expansion",
-      "why": "morphing_button_interactions is a selected design pattern; achieves premium feel without JS overhead"
-    },
-    {
-      "what": "Added social proof section with blockquote testimonials and press logo strip",
-      "why": "social_proof_heavy is a selected design pattern; positioned near CTA as recommended in implementation guidance"
-    },
-    {
-      "what": "Included skip link, aria-label attributes, aria-expanded on hamburger, and sr-only figcaptions",
-      "why": "Tier 2 task (landing page) requires ARIA labels on interactive elements and keyboard accessibility per HTML code generation rules"
-    },
-    {
-      "what": "Added prefers-reduced-motion guard for all animations",
-      "why": "HTML code generation rules and design pattern rules both require respecting reduced motion preference; critical for accessibility"
+      "what": "Used fetchpriority='high' and loading='eager' on hero img with width/height attributes",
+      "why": "Hero image is the LCP element; eager loading and high fetch priority are correct performance attributes per HTML code generation rules"
     }
   ],
-  "tools_used": ["Read", "Glob", "Write", "Edit", "Bash"]
+  "tools_used": ["Read", "Edit", "Write", "Bash"]
 }

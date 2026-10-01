@@ -2,7 +2,8 @@
   "files_created": [
     ".gitignore",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "index.html"
   ],
   "files_modified": [],
   "decisions": [
@@ -17,7 +18,39 @@
     {
       "what": "Created LICENSE with MIT License text using year 2026",
       "why": "Spec requested standard MIT License; used current year (2026) as specified and a descriptive copyright holder name matching the project"
+    },
+    {
+      "what": "Applied dark luxury color palette (#0a0a0a background, #c9a96e gold accent)",
+      "why": "Spec calls for a Luxury Gen-Z fashion brand; dark premium aesthetic aligns with photography_centric and minimalist_typography design patterns from 000_landing_page_design_rules.md"
+    },
+    {
+      "what": "Used Tailwind CDN v3.x with inline tailwind.config for custom tokens",
+      "why": "Spec explicitly requires Tailwind CSS CDN v3.x from cdn.tailwindcss.com; custom config allows brand colors and keyframes without a build step"
+    },
+    {
+      "what": "Implemented scroll-triggered reveals via Intersection Observer",
+      "why": "scroll_triggered_reveals is a selected design pattern; Intersection Observer is a native, zero-dependency approach consistent with the plain HTML/CSS/JS project structure"
+    },
+    {
+      "what": "Added skeleton loading CSS animation on gallery/product card placeholders",
+      "why": "skeleton_loading is a selected design pattern; improves perceived performance for image-heavy sections on mobile connections"
+    },
+    {
+      "what": "Implemented morphing button interactions with CSS ::after overlay and letter-spacing expansion",
+      "why": "morphing_button_interactions is a selected design pattern; achieves premium feel without JS overhead"
+    },
+    {
+      "what": "Added social proof section with blockquote testimonials and press logo strip",
+      "why": "social_proof_heavy is a selected design pattern; positioned near CTA as recommended in implementation guidance"
+    },
+    {
+      "what": "Included skip link, aria-label attributes, aria-expanded on hamburger, and sr-only figcaptions",
+      "why": "Tier 2 task (landing page) requires ARIA labels on interactive elements and keyboard accessibility per HTML code generation rules"
+    },
+    {
+      "what": "Added prefers-reduced-motion guard for all animations",
+      "why": "HTML code generation rules and design pattern rules both require respecting reduced motion preference; critical for accessibility"
     }
   ],
-  "tools_used": ["Read", "Write"]
+  "tools_used": ["Read", "Glob", "Write", "Edit", "Bash"]
 }

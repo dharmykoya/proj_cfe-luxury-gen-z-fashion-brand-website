@@ -1,31 +1,51 @@
 {
   "files_created": [],
-  "files_modified": ["index.html"],
+  "files_modified": ["index.html", "README.md"],
   "decisions": [
     {
-      "what": "Added &q=85&auto=format to hero image URL",
-      "why": "Spec requires w=1920&h=1080&q=85&auto=format for the hero image to optimize delivery quality and format"
+      "what": "Added aria-label='Main navigation' to the primary nav element",
+      "why": "Spec required aria-label attributes on navigation landmarks for screen reader accessibility"
     },
     {
-      "what": "Added &q=80&auto=format to all gallery image URLs",
-      "why": "Spec requires quality and auto=format parameters on all gallery images (square: w=800&h=800, tall: w=800&h=1200) for optimized web delivery"
+      "what": "Added aria-label attributes to all nav links in desktop nav, mobile nav, and footer nav columns",
+      "why": "Spec required aria-label like 'Navigate to gallery section' on navigation links to provide descriptive context for screen readers"
     },
     {
-      "what": "Kept loading=eager on first 2 gallery items, loading=lazy on the rest",
-      "why": "Spec requires eager loading for first 2 gallery images and lazy loading for the rest; existing attributes were already correct"
+      "what": "Added leading-tight to h2 headings in gallery, story, newsletter sections that were missing it",
+      "why": "Spec required leading-tight for large headlines to refine typography hierarchy consistently"
     },
     {
-      "what": "Added &q=80&auto=format to both brand story image URLs",
-      "why": "Spec requires w=1200&h=800&q=80&auto=format and loading=lazy for brand story images; dimensions and lazy loading were already correct"
+      "what": "Added tracking-tight to h2 headings in gallery, story, newsletter sections",
+      "why": "Spec required tracking-tight for large headlines to refine letter-spacing throughout the typography hierarchy"
     },
     {
-      "what": "Updated all image alt text to be more descriptive and specific",
-      "why": "Spec requires descriptive alt text (e.g., 'Luxury black evening dress with elegant draping' instead of generic labels) for accessibility"
+      "what": "Added leading-relaxed to body paragraphs in hero, story, footer, and newsletter sections",
+      "why": "Spec required leading-relaxed for body text to ensure appropriate line-height for readability"
     },
     {
-      "what": "Kept existing width and height attributes unchanged",
-      "why": "All img tags already had width and height attributes preventing layout shift; no changes needed"
+      "what": "Enhanced image alt text across gallery and story sections to be more descriptive",
+      "why": "Spec required enhanced alt text on all images for better screen reader accessibility and WCAG AA compliance"
+    },
+    {
+      "what": "Wrapped footer social links div in a nav element with aria-label='Footer social media links'",
+      "why": "Provides semantic navigation landmark for screen readers to identify the footer social media links region"
+    },
+    {
+      "what": "Added aria-label to CTA anchor links (View All Pieces, Join the Movement)",
+      "why": "Spec required accessible labels on interactive elements where additional context improves screen reader experience"
+    },
+    {
+      "what": "Added Features Implemented, Accessibility, Performance, Browser Support, and Credits sections to README",
+      "why": "Spec required all these sections to document the completed project comprehensively"
+    },
+    {
+      "what": "Updated Project Structure in README to reflect actual file structure (removed non-existent assets/ directory)",
+      "why": "The actual project has index.html, app.js, .gitignore, README.md at root; the previous README listed a hypothetical assets/ directory"
+    },
+    {
+      "what": "Updated Deployment section in README with note about automated GitHub Actions workflow",
+      "why": "Spec required noting that the site is already deployed via workflow"
     }
   ],
-  "tools_used": ["Read", "Edit", "Write", "Bash"]
+  "tools_used": ["Read", "Write", "Bash"]
 }

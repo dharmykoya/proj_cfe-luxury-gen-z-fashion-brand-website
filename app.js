@@ -115,8 +115,8 @@ const showSkeletonError = (img) => {
   }
 };
 
-// Select all images inside the gallery section
-const galleryImages = document.querySelectorAll('#gallery img');
+// Select all images inside the gallery and brand story sections
+const galleryImages = document.querySelectorAll('#gallery img, #story img');
 
 galleryImages.forEach((img) => {
   // Image already decoded and cached by the browser

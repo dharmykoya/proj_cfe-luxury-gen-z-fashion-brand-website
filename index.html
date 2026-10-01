@@ -155,66 +155,48 @@
   <!-- ════════════════════════════════════════
        HEADER / NAVIGATION
        ════════════════════════════════════════ -->
-  <header class="fixed top-0 inset-x-0 z-40 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/5">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 md:h-20">
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
 
-        <!-- Brand wordmark -->
-        <a href="/" class="text-[#c9a96e] font-bold tracking-[0.2em] uppercase text-sm md:text-base" aria-label="Luxury Gen-Z Fashion Brand — Home">
-          ARVAD
-        </a>
+      <!-- Brand logo/name -->
+      <a href="/" class="text-2xl font-bold text-gray-900">ARVAD</a>
 
-        <!-- Primary navigation (desktop) -->
-        <nav aria-label="Main navigation" class="hidden md:block">
-          <ul class="flex items-center gap-8" role="list">
-            <li><a href="#collection" class="text-xs tracking-[0.15em] uppercase text-[#f0ece4]/70 hover:text-[#c9a96e] transition-colors duration-200">Collection</a></li>
-            <li><a href="#gallery" class="text-xs tracking-[0.15em] uppercase text-[#f0ece4]/70 hover:text-[#c9a96e] transition-colors duration-200">Gallery</a></li>
-            <li><a href="#story" class="text-xs tracking-[0.15em] uppercase text-[#f0ece4]/70 hover:text-[#c9a96e] transition-colors duration-200">Story</a></li>
-            <li><a href="#press" class="text-xs tracking-[0.15em] uppercase text-[#f0ece4]/70 hover:text-[#c9a96e] transition-colors duration-200">Press</a></li>
-          </ul>
-        </nav>
-
-        <!-- CTA + hamburger -->
-        <div class="flex items-center gap-4">
-          <a href="#collection" class="hidden sm:inline-flex btn-morph items-center px-5 py-2 border border-[#c9a96e] text-[#c9a96e] text-xs tracking-[0.15em] uppercase rounded-none hover:bg-[#c9a96e] hover:text-[#0a0a0a] transition-colors duration-300">
-            Shop Now
-          </a>
-
-          <!-- Mobile hamburger -->
-          <button
-            type="button"
-            id="menu-toggle"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            aria-label="Open main menu"
-            class="md:hidden flex flex-col gap-1.5 p-2"
-          >
-            <span class="block w-6 h-px bg-[#f0ece4] transition-all duration-300" id="hamburger-top"></span>
-            <span class="block w-6 h-px bg-[#f0ece4] transition-all duration-300" id="hamburger-mid"></span>
-            <span class="block w-6 h-px bg-[#f0ece4] transition-all duration-300" id="hamburger-bot"></span>
-          </button>
-        </div>
+      <!-- Desktop navigation -->
+      <div class="hidden md:flex gap-8">
+        <a href="#hero" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Home</a>
+        <a href="#gallery" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Gallery</a>
+        <a href="#story" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Story</a>
+        <a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Contact</a>
       </div>
-    </div>
 
-    <!-- Mobile menu -->
+      <!-- Mobile hamburger button -->
+      <button
+        type="button"
+        id="menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="block md:hidden p-2 text-gray-900"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu panel (slides in from right) -->
     <div
       id="mobile-menu"
-      class="md:hidden hidden bg-[#141414] border-t border-white/5"
+      class="fixed inset-y-0 right-0 w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out"
       aria-label="Mobile navigation"
     >
-      <nav>
-        <ul class="flex flex-col py-4" role="list">
-          <li><a href="#collection" class="block px-6 py-3 text-sm tracking-[0.12em] uppercase text-[#f0ece4]/80 hover:text-[#c9a96e] hover:bg-white/5 transition-colors">Collection</a></li>
-          <li><a href="#gallery"    class="block px-6 py-3 text-sm tracking-[0.12em] uppercase text-[#f0ece4]/80 hover:text-[#c9a96e] hover:bg-white/5 transition-colors">Gallery</a></li>
-          <li><a href="#story"      class="block px-6 py-3 text-sm tracking-[0.12em] uppercase text-[#f0ece4]/80 hover:text-[#c9a96e] hover:bg-white/5 transition-colors">Story</a></li>
-          <li><a href="#press"      class="block px-6 py-3 text-sm tracking-[0.12em] uppercase text-[#f0ece4]/80 hover:text-[#c9a96e] hover:bg-white/5 transition-colors">Press</a></li>
-          <li class="px-6 pt-4 pb-2">
-            <a href="#collection" class="btn-morph block text-center py-3 border border-[#c9a96e] text-[#c9a96e] text-xs tracking-[0.15em] uppercase hover:bg-[#c9a96e] hover:text-[#0a0a0a] transition-colors duration-300">
-              Shop Now
-            </a>
-          </li>
-        </ul>
+      <nav class="flex flex-col pt-20 px-6 gap-6">
+        <a href="#hero" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Home</a>
+        <a href="#gallery" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Gallery</a>
+        <a href="#story" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Story</a>
+        <a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium transition-colors">Contact</a>
       </nav>
     </div>
   </header>
@@ -577,43 +559,6 @@
        JAVASCRIPT — interactions & scroll reveals
        ════════════════════════════════════════ -->
   <script defer>
-    /* ── Mobile menu toggle ── */
-    (function () {
-      const toggle = document.getElementById('menu-toggle');
-      const menu   = document.getElementById('mobile-menu');
-      const top    = document.getElementById('hamburger-top');
-      const mid    = document.getElementById('hamburger-mid');
-      const bot    = document.getElementById('hamburger-bot');
-
-      if (!toggle || !menu) return;
-
-      toggle.addEventListener('click', function () {
-        const isOpen = menu.classList.toggle('hidden') === false;
-        toggle.setAttribute('aria-expanded', String(isOpen));
-        // Morph hamburger to ✕
-        if (isOpen) {
-          top.style.transform = 'translateY(6px) rotate(45deg)';
-          mid.style.opacity   = '0';
-          bot.style.transform = 'translateY(-6px) rotate(-45deg)';
-        } else {
-          top.style.transform = '';
-          mid.style.opacity   = '1';
-          bot.style.transform = '';
-        }
-      });
-
-      // Close on nav link click
-      menu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          menu.classList.add('hidden');
-          toggle.setAttribute('aria-expanded', 'false');
-          top.style.transform = '';
-          mid.style.opacity   = '1';
-          bot.style.transform = '';
-        });
-      });
-    })();
-
     /* ── Scroll-triggered reveals (Intersection Observer) ── */
     (function () {
       var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -683,6 +628,8 @@
       });
     })();
   </script>
+
+  <script src="app.js" defer></script>
 
 </body>
 </html>

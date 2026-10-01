@@ -1,19 +1,27 @@
 {
-  "files_created": [],
+  "files_created": ["app.js"],
   "files_modified": ["index.html"],
   "decisions": [
     {
-      "what": "Replaced gradient placeholder hero with full-bleed Unsplash photography hero using h-screen, absolute-positioned img with object-cover, gradient overlay (bg-gradient-to-t from-black/60 via-black/20 to-transparent), and bottom-anchored content container with h1/p/CTA button",
-      "why": "Specification required h-screen, the Unsplash URL, specific gradient overlay classes, content positioned at bottom, and specific typography/button classes"
+      "what": "Replaced existing dark-themed header with white/light header per spec 001",
+      "why": "Spec explicitly defines header classes (bg-white/80, text-gray-900, border-gray-100) which differ from the existing dark header; spec must be followed exactly"
     },
     {
-      "what": "Added skeleton loader div (absolute inset-0 bg-gray-200 animate-pulse) with JavaScript to hide it once the hero img fires load/error",
-      "why": "Specification required a skeleton loading state hidden via JavaScript once image loads"
+      "what": "Changed mobile menu from hidden/block dropdown to translate-x-full right-side sliding panel",
+      "why": "Spec 001 requires fixed inset-y-0 right-0 w-64 with translate-x-full transition; app.js (spec 002) toggles translate-x-full class"
     },
     {
-      "what": "Used fetchpriority='high' and loading='eager' on hero img with width/height attributes",
-      "why": "Hero image is the LCP element; eager loading and high fetch priority are correct performance attributes per HTML code generation rules"
+      "what": "Removed old mobile menu toggle IIFE from inline script when writing modified index.html",
+      "why": "The old inline JS referenced hamburger-top/mid/bot IDs that no longer exist in the new header and toggled 'hidden' class instead of 'translate-x-full', which would throw errors and conflict with app.js"
+    },
+    {
+      "what": "Combined task 001 and task 003 changes into a single index.html write",
+      "why": "Both tasks modify index.html; task 003 only adds a script tag before closing body, so applying both changes together avoids a redundant write cycle while producing the correct final state"
+    },
+    {
+      "what": "Nav links point to Home (#hero), Gallery (#gallery), Story (#story), Contact (#contact) as specified",
+      "why": "Spec 001 explicitly lists Home, Gallery, Story, Contact as the four navigation destinations"
     }
   ],
-  "tools_used": ["Read", "Edit", "Write", "Bash"]
+  "tools_used": ["Read", "Glob", "Bash", "Write"]
 }

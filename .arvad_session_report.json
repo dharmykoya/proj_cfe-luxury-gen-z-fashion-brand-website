@@ -1,23 +1,15 @@
 {
   "files_created": [],
-  "files_modified": ["index.html", "app.js"],
+  "files_modified": ["index.html"],
   "decisions": [
     {
-      "what": "Replaced existing dark-themed #story section with new alternating image-text layout",
-      "why": "Spec required py-24 bg-white classes, 'Our Story' h2, two article subsections with Unsplash lifestyle images, and descriptive copy — entirely different from the existing dark-themed story section"
+      "what": "Inserted new <footer id='contact' class='bg-gray-900 text-white py-16'> between </main> and the existing site footer",
+      "why": "Spec required a footer element with id='contact' (nav anchor target) with a 3-column grid: brand name/tagline, social media links (Instagram/TikTok/Pinterest inline SVGs 24x24), and contact email (contact@luxurybrand.com mailto). An existing footer without that id was already present, so the new section was inserted above it to satisfy the anchor link and the distinct bg-gray-900 styling specified."
     },
     {
-      "what": "Added aria-labelledby to new story section pointing to h2#story-heading",
-      "why": "Semantic HTML best practice consistent with all other sections on the page; spec requires semantic HTML"
-    },
-    {
-      "what": "Used data-skeleton attribute on skeleton divs in story images",
-      "why": "Matches the gallery section pattern so hideSkeleton/showSkeletonError handlers in app.js work correctly via container.querySelector('[data-skeleton]')"
-    },
-    {
-      "what": "Extended querySelectorAll selector in app.js from '#gallery img' to '#gallery img, #story img'",
-      "why": "Spec required extending the handler to cover brand story images without duplicating code; compound selector is the minimal change"
+      "what": "Used <nav aria-label='Social media links'> wrapping the social icon links",
+      "why": "Spec says 'use semantic HTML (nav for social links if appropriate)' and includes aria-labels on each anchor"
     }
   ],
-  "tools_used": ["Read", "Edit", "Write"]
+  "tools_used": ["Read", "Edit"]
 }

@@ -294,45 +294,134 @@
     </section>
 
     <!-- ── GALLERY SECTION ───────────────────── -->
-    <section id="gallery" aria-labelledby="gallery-heading" class="py-24 md:py-32 bg-[#141414]">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="gallery" aria-labelledby="gallery-heading" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
 
-        <div class="text-center mb-16 md:mb-20">
-          <p class="reveal text-[#c9a96e] text-xs tracking-[0.4em] uppercase mb-4">Campaign 2026</p>
-          <h2 id="gallery-heading" class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            The Vision
-          </h2>
-        </div>
+        <h2 id="gallery-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Gallery</h2>
 
-        <!-- Photography-centric editorial grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <!-- Photography-centric CSS Grid with varying item sizes -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
 
-          <!-- Large feature image -->
-          <figure class="reveal col-span-2 row-span-2 gallery-item overflow-hidden" aria-label="Campaign editorial image 1">
-            <div class="w-full h-full min-h-[300px] md:min-h-[480px] bg-[#1c1c1c] skeleton"></div>
-            <figcaption class="sr-only">Campaign editorial — Statement piece</figcaption>
-          </figure>
+          <!-- Item 1: col-span-2 row-span-2 — large feature item, eager load -->
+          <div class="group relative aspect-square overflow-hidden rounded-xl col-span-2 row-span-2">
+            <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=1200"
+              alt="Luxury fashion editorial — statement dress"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="eager"
+              width="800"
+              height="1200"
+            >
+            <div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white font-semibold translate-y-full transition-transform group-hover:translate-y-0">Statement Dress</div>
+          </div>
 
-          <!-- Smaller supporting images -->
-          <figure class="reveal reveal-delay-1 gallery-item overflow-hidden" aria-label="Campaign editorial image 2">
-            <div class="aspect-square bg-[#1c1c1c] skeleton" style="animation-delay: 0.15s;"></div>
-            <figcaption class="sr-only">Campaign editorial — Detail shot</figcaption>
-          </figure>
+          <!-- Item 2: regular square, eager load -->
+          <div class="group relative aspect-square overflow-hidden rounded-xl">
+            <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
+            <img
+              src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&h=800"
+              alt="High-fashion accessories editorial"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="eager"
+              width="800"
+              height="800"
+            >
+            <div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white font-semibold translate-y-full transition-transform group-hover:translate-y-0">Luxury Accessories</div>
+          </div>
 
-          <figure class="reveal reveal-delay-2 gallery-item overflow-hidden" aria-label="Campaign editorial image 3">
-            <div class="aspect-square bg-[#1c1c1c] skeleton" style="animation-delay: 0.3s;"></div>
-            <figcaption class="sr-only">Campaign editorial — Lifestyle</figcaption>
-          </figure>
+          <!-- Item 3: col-span-2 — wide item, lazy load -->
+          <div class="group relative aspect-square overflow-hidden rounded-xl col-span-2">
+            <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=800"
+              alt="Designer sneakers — fashion editorial"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              width="1200"
+              height="800"
+            >
+            <div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white font-semibold translate-y-full transition-transform group-hover:translate-y-0">Designer Footwear</div>
+          </div>
 
-          <figure class="reveal reveal-delay-1 gallery-item overflow-hidden" aria-label="Campaign editorial image 4">
-            <div class="aspect-square bg-[#1c1c1c] skeleton" style="animation-delay: 0.45s;"></div>
-            <figcaption class="sr-only">Campaign editorial — Portrait</figcaption>
-          </figure>
+          <!-- Item 4: regular square, lazy load -->
+          <div class="group relative aspect-square overflow-hidden rounded-xl">
+            <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
+            <img
+              src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&h=800"
+              alt="Premium outerwear coat editorial"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+            <div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white font-semibold translate-y-full transition-transform group-hover:translate-y-0">Premium Outerwear</div>
+          </div>
 
-          <figure class="reveal reveal-delay-2 gallery-item overflow-hidden" aria-label="Campaign editorial image 5">
-            <div class="aspect-square bg-[#1c1c1c] skeleton" style="animation-delay: 0.6s;"></div>
-            <figcaption class="sr-only">Campaign editorial — Texture</figcaption>
-          </figure>
+          <!-- Item 5: col-span-2 row-span-2 — large feature item, lazy load -->
+          <div class="group relative aspect-square overflow-hidden rounded-xl col-span-2 row-span-2">
+            <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
+            <img
+              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=1200"
+              alt="High-fashion editorial portrait"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              width="800"
+              height="1200"
+            >
+            <div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white font-semibold translate-y-full transition-transform group-hover:translate-y-0">Editorial Collection</div>
+          </div>
+
+          <!-- Item 6: regular square, lazy load -->
+          <div class="group relative aspect-square overflow-hidden rounded-xl">
+            <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800"
+              alt="Luxury watch accessories"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+            <div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white font-semibold translate-y-full transition-transform group-hover:translate-y-0">Signature Watch</div>
+          </div>
+
+          <!-- Item 7: regular square, lazy load -->
+          <div class="group relative aspect-square overflow-hidden rounded-xl">
+            <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
+            <img
+              src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&h=800"
+              alt="Women's fashion editorial dress"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+            <div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white font-semibold translate-y-full transition-transform group-hover:translate-y-0">Couture Gown</div>
+          </div>
+
+          <!-- Item 8: regular square, lazy load -->
+          <div class="group relative aspect-square overflow-hidden rounded-xl">
+            <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
+            <img
+              src="https://images.unsplash.com/photo-1544441893-675973e31985?w=800&h=800"
+              alt="Luxury coat fashion editorial"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+            <div class="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/30"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white font-semibold translate-y-full transition-transform group-hover:translate-y-0">Luxe Outerwear</div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -1,27 +1,27 @@
 {
-  "files_created": ["app.js"],
-  "files_modified": ["index.html"],
+  "files_created": [],
+  "files_modified": ["index.html", "app.js"],
   "decisions": [
     {
-      "what": "Replaced existing dark-themed header with white/light header per spec 001",
-      "why": "Spec explicitly defines header classes (bg-white/80, text-gray-900, border-gray-100) which differ from the existing dark header; spec must be followed exactly"
+      "what": "Replaced existing #gallery section with new CSS Grid gallery featuring 8 Unsplash fashion images",
+      "why": "The existing gallery section (id='gallery') used dark brand theme placeholders without real images. The spec required a new gallery with bg-gray-50, CSS Grid with col-span/row-span variations, skeleton loaders with data-skeleton attribute, and actual Unsplash image URLs."
     },
     {
-      "what": "Changed mobile menu from hidden/block dropdown to translate-x-full right-side sliding panel",
-      "why": "Spec 001 requires fixed inset-y-0 right-0 w-64 with translate-x-full transition; app.js (spec 002) toggles translate-x-full class"
+      "what": "Applied col-span-2 row-span-2 to items 1 and 5, col-span-2 to item 3",
+      "why": "Spec explicitly calls out these span overrides for visual interest in the grid layout."
     },
     {
-      "what": "Removed old mobile menu toggle IIFE from inline script when writing modified index.html",
-      "why": "The old inline JS referenced hamburger-top/mid/bot IDs that no longer exist in the new header and toggled 'hidden' class instead of 'translate-x-full', which would throw errors and conflict with app.js"
+      "what": "Used loading='eager' for items 1-2, loading='lazy' for items 3-8",
+      "why": "Spec requires eager loading for first two items and lazy loading for the rest to improve perceived performance on mobile connections."
     },
     {
-      "what": "Combined task 001 and task 003 changes into a single index.html write",
-      "why": "Both tasks modify index.html; task 003 only adds a script tag before closing body, so applying both changes together avoids a redundant write cycle while producing the correct final state"
+      "what": "Appended gallery skeleton handler to app.js after existing mobile menu code with clear section comment",
+      "why": "Spec says to append functionality and use clear comments to separate gallery logic from navigation logic."
     },
     {
-      "what": "Nav links point to Home (#hero), Gallery (#gallery), Story (#story), Contact (#contact) as specified",
-      "why": "Spec 001 explicitly lists Home, Gallery, Story, Contact as the four navigation destinations"
+      "what": "Added IntersectionObserver in app.js as optional enhancement for viewport-aware lazy loading",
+      "why": "Spec explicitly mentions IntersectionObserver as an optional enhancement for lazy loading optimization."
     }
   ],
-  "tools_used": ["Read", "Glob", "Bash", "Write"]
+  "tools_used": ["Read", "Edit", "Write"]
 }

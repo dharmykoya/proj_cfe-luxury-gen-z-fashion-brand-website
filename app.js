@@ -149,3 +149,59 @@ if ('IntersectionObserver' in window) {
 
   galleryImages.forEach((img) => galleryObserver.observe(img));
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SCROLL-TRIGGERED REVEAL ANIMATIONS — Intersection Observer for [data-reveal]
+// ─────────────────────────────────────────────────────────────────────────────
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if the user prefers reduced motion; skip all animations if so
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    // Make all data-reveal elements immediately visible without animation
+    document.querySelectorAll('[data-reveal]').forEach((el) => {
+      el.classList.remove('opacity-0', 'translate-y-8');
+      el.classList.add('opacity-100', 'translate-y-0');
+    });
+    return;
+  }
+
+  /**
+   * Reveal a single element by swapping the hidden state classes for visible ones.
+   * Respects the data-delay attribute to stagger animations in ms.
+   *
+   * @param {Element} el - The element with [data-reveal] to animate in.
+   */
+  const revealElement = (el) => {
+    const delay = parseInt(el.dataset.delay, 10) || 0;
+
+    setTimeout(() => {
+      el.classList.remove('opacity-0', 'translate-y-8');
+      el.classList.add('opacity-100', 'translate-y-0');
+    }, delay);
+  };
+
+  // Create IntersectionObserver: trigger when 20% of element is in view,
+  // with a bottom rootMargin so elements reveal before they fully enter viewport.
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          revealElement(entry.target);
+          // Unobserve after triggering (triggerOnce behaviour)
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -20% 0px',
+    }
+  );
+
+  // Observe all elements marked for scroll-triggered reveal
+  document.querySelectorAll('[data-reveal]').forEach((el) => {
+    revealObserver.observe(el);
+  });
+});

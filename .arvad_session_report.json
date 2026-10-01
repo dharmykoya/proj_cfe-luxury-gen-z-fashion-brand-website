@@ -1,15 +1,15 @@
 {
   "files_created": [],
-  "files_modified": ["index.html"],
+  "files_modified": ["index.html", "app.js"],
   "decisions": [
     {
-      "what": "Inserted new <footer id='contact' class='bg-gray-900 text-white py-16'> between </main> and the existing site footer",
-      "why": "Spec required a footer element with id='contact' (nav anchor target) with a 3-column grid: brand name/tagline, social media links (Instagram/TikTok/Pinterest inline SVGs 24x24), and contact email (contact@luxurybrand.com mailto). An existing footer without that id was already present, so the new section was inserted above it to satisfy the anchor link and the distinct bg-gray-900 styling specified."
+      "what": "Added data-reveal attributes and initial animation classes (opacity-0 translate-y-8 transition-all duration-500 ease-out) to gallery h2, 8 gallery item divs (data-delay 0-700ms), brand story h2, 2 brand story articles (data-delay 0/100ms), and footer columns in both footers (data-delay 0/100/200ms).",
+      "why": "Spec required these exact elements to receive data-reveal and hidden initial state classes, to be toggled by the JavaScript Intersection Observer on scroll."
     },
     {
-      "what": "Used <nav aria-label='Social media links'> wrapping the social icon links",
-      "why": "Spec says 'use semantic HTML (nav for social links if appropriate)' and includes aria-labels on each anchor"
+      "what": "Added scroll reveal functionality to app.js inside a DOMContentLoaded listener: prefers-reduced-motion guard, IntersectionObserver with threshold 0.2 and rootMargin '0px 0px -20% 0px', class swap (opacity-0/translate-y-8 removed, opacity-100/translate-y-0 added), setTimeout stagger via data-delay attribute, and unobserve after reveal.",
+      "why": "Spec explicitly required these parameters, behaviors, and initialization timing."
     }
   ],
-  "tools_used": ["Read", "Edit"]
+  "tools_used": ["Read", "Write", "Bash"]
 }

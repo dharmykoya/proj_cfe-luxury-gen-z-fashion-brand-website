@@ -297,13 +297,13 @@
     <section id="gallery" aria-labelledby="gallery-heading" class="py-24 bg-gray-50">
       <div class="max-w-7xl mx-auto px-6">
 
-        <h2 id="gallery-heading" class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Gallery</h2>
+        <h2 id="gallery-heading" data-reveal class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 opacity-0 translate-y-8 transition-all duration-500 ease-out">Gallery</h2>
 
         <!-- Photography-centric CSS Grid with varying item sizes -->
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
 
           <!-- Item 1: col-span-2 row-span-2 — large feature item, eager load -->
-          <div class="group relative aspect-square overflow-hidden rounded-xl col-span-2 row-span-2">
+          <div data-reveal data-delay="0" class="group relative aspect-square overflow-hidden rounded-xl col-span-2 row-span-2 opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
             <img
               src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=1200"
@@ -318,7 +318,7 @@
           </div>
 
           <!-- Item 2: regular square, eager load -->
-          <div class="group relative aspect-square overflow-hidden rounded-xl">
+          <div data-reveal data-delay="100" class="group relative aspect-square overflow-hidden rounded-xl opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
             <img
               src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&h=800"
@@ -333,7 +333,7 @@
           </div>
 
           <!-- Item 3: col-span-2 — wide item, lazy load -->
-          <div class="group relative aspect-square overflow-hidden rounded-xl col-span-2">
+          <div data-reveal data-delay="200" class="group relative aspect-square overflow-hidden rounded-xl col-span-2 opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
             <img
               src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=800"
@@ -348,7 +348,7 @@
           </div>
 
           <!-- Item 4: regular square, lazy load -->
-          <div class="group relative aspect-square overflow-hidden rounded-xl">
+          <div data-reveal data-delay="300" class="group relative aspect-square overflow-hidden rounded-xl opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
             <img
               src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&h=800"
@@ -363,7 +363,7 @@
           </div>
 
           <!-- Item 5: col-span-2 row-span-2 — large feature item, lazy load -->
-          <div class="group relative aspect-square overflow-hidden rounded-xl col-span-2 row-span-2">
+          <div data-reveal data-delay="400" class="group relative aspect-square overflow-hidden rounded-xl col-span-2 row-span-2 opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
             <img
               src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=1200"
@@ -378,7 +378,7 @@
           </div>
 
           <!-- Item 6: regular square, lazy load -->
-          <div class="group relative aspect-square overflow-hidden rounded-xl">
+          <div data-reveal data-delay="500" class="group relative aspect-square overflow-hidden rounded-xl opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
             <img
               src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800"
@@ -393,7 +393,7 @@
           </div>
 
           <!-- Item 7: regular square, lazy load -->
-          <div class="group relative aspect-square overflow-hidden rounded-xl">
+          <div data-reveal data-delay="600" class="group relative aspect-square overflow-hidden rounded-xl opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
             <img
               src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&h=800"
@@ -408,7 +408,7 @@
           </div>
 
           <!-- Item 8: regular square, lazy load -->
-          <div class="group relative aspect-square overflow-hidden rounded-xl">
+          <div data-reveal data-delay="700" class="group relative aspect-square overflow-hidden rounded-xl opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-xl" data-skeleton></div>
             <img
               src="https://images.unsplash.com/photo-1544441893-675973e31985?w=800&h=800"
@@ -430,12 +430,12 @@
     <section id="story" aria-labelledby="story-heading" class="py-24 bg-white">
       <div class="max-w-6xl mx-auto px-6">
 
-        <h2 id="story-heading" class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16">Our Story</h2>
+        <h2 id="story-heading" data-reveal class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16 opacity-0 translate-y-8 transition-all duration-500 ease-out">Our Story</h2>
 
         <div class="space-y-24">
 
           <!-- First subsection: Image left, text right -->
-          <article class="grid md:grid-cols-2 gap-12 items-center">
+          <article data-reveal data-delay="0" class="grid md:grid-cols-2 gap-12 items-center opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-2xl" data-skeleton aria-hidden="true"></div>
               <img
@@ -455,7 +455,7 @@
           </article>
 
           <!-- Second subsection: Text left, image right (reversed on desktop) -->
-          <article class="grid md:grid-cols-2 gap-12 items-center md:[&>*:first-child]:order-2">
+          <article data-reveal data-delay="100" class="grid md:grid-cols-2 gap-12 items-center md:[&>*:first-child]:order-2 opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <div class="absolute inset-0 bg-gray-200 animate-pulse rounded-2xl" data-skeleton aria-hidden="true"></div>
               <img
@@ -593,13 +593,13 @@
       <div class="grid md:grid-cols-3 gap-12">
 
         <!-- Column 1: Brand -->
-        <div>
+        <div data-reveal data-delay="0" class="opacity-0 translate-y-8 transition-all duration-500 ease-out">
           <h3 class="text-2xl font-bold mb-4">ARVAD</h3>
           <p class="text-gray-400">Luxury craftsmanship meets Gen-Z culture. Bold, authentic, unapologetic.</p>
         </div>
 
         <!-- Column 2: Social Media -->
-        <div>
+        <div data-reveal data-delay="100" class="opacity-0 translate-y-8 transition-all duration-500 ease-out">
           <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
           <nav aria-label="Social media links">
             <div class="flex gap-6">
@@ -625,7 +625,7 @@
         </div>
 
         <!-- Column 3: Contact -->
-        <div>
+        <div data-reveal data-delay="200" class="opacity-0 translate-y-8 transition-all duration-500 ease-out">
           <h4 class="text-lg font-semibold mb-4">Contact</h4>
           <p><a href="mailto:contact@luxurybrand.com" class="text-gray-400 hover:text-indigo-400 transition-colors">contact@luxurybrand.com</a></p>
         </div>
@@ -650,7 +650,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
 
         <!-- Brand column -->
-        <div class="lg:col-span-2">
+        <div data-reveal data-delay="0" class="lg:col-span-2 opacity-0 translate-y-8 transition-all duration-500 ease-out">
           <a href="/" class="inline-block text-[#c9a96e] font-bold tracking-[0.3em] uppercase text-lg mb-4" aria-label="ARVAD Home">ARVAD</a>
           <p class="text-[#6b6b6b] text-sm leading-relaxed max-w-xs">
             Luxury craftsmanship for the generation that rewrites the rules.
@@ -677,7 +677,7 @@
         </div>
 
         <!-- Navigation links -->
-        <nav aria-label="Footer navigation — Shop">
+        <nav data-reveal data-delay="100" aria-label="Footer navigation — Shop" class="opacity-0 translate-y-8 transition-all duration-500 ease-out">
           <h3 class="text-xs tracking-[0.3em] uppercase text-[#f0ece4]/50 mb-5">Shop</h3>
           <ul class="space-y-3" role="list">
             <li><a href="#collection" class="text-sm text-[#6b6b6b] hover:text-[#c9a96e] transition-colors">Collection</a></li>
@@ -688,7 +688,7 @@
         </nav>
 
         <!-- Contact / Info links -->
-        <nav aria-label="Footer navigation — Info">
+        <nav data-reveal data-delay="200" aria-label="Footer navigation — Info" class="opacity-0 translate-y-8 transition-all duration-500 ease-out">
           <h3 class="text-xs tracking-[0.3em] uppercase text-[#f0ece4]/50 mb-5">Info</h3>
           <ul class="space-y-3" role="list">
             <li><a href="#story"   class="text-sm text-[#6b6b6b] hover:text-[#c9a96e] transition-colors">Our Story</a></li>

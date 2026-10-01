@@ -3,21 +3,29 @@
   "files_modified": ["index.html"],
   "decisions": [
     {
-      "what": "Replaced transition-transform/transition-colors with transition-all duration-200 on CTA buttons",
-      "why": "Avoids duplicate/conflicting transition utilities while enabling the full set of morphing interaction classes"
+      "what": "Added &q=85&auto=format to hero image URL",
+      "why": "Spec requires w=1920&h=1080&q=85&auto=format for the hero image to optimize delivery quality and format"
     },
     {
-      "what": "Added hover:scale-105 active:scale-98 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 cursor-pointer to all four CTAs",
-      "why": "Specified in the code change description for premium micro-interaction feedback on all CTA elements"
+      "what": "Added &q=80&auto=format to all gallery image URLs",
+      "why": "Spec requires quality and auto=format parameters on all gallery images (square: w=800&h=800, tall: w=800&h=1200) for optimized web delivery"
     },
     {
-      "what": "Added hover:bg-gray-50 only to the hero CTA (white button)",
-      "why": "Spec explicitly targets the white hero button for this specific hover color enhancement"
+      "what": "Kept loading=eager on first 2 gallery items, loading=lazy on the rest",
+      "why": "Spec requires eager loading for first 2 gallery images and lazy loading for the rest; existing attributes were already correct"
     },
     {
-      "what": "Did not add type='button' to anchor tag CTAs",
-      "why": "type attribute is not valid on anchor elements; the subscribe button already has type='submit'"
+      "what": "Added &q=80&auto=format to both brand story image URLs",
+      "why": "Spec requires w=1200&h=800&q=80&auto=format and loading=lazy for brand story images; dimensions and lazy loading were already correct"
+    },
+    {
+      "what": "Updated all image alt text to be more descriptive and specific",
+      "why": "Spec requires descriptive alt text (e.g., 'Luxury black evening dress with elegant draping' instead of generic labels) for accessibility"
+    },
+    {
+      "what": "Kept existing width and height attributes unchanged",
+      "why": "All img tags already had width and height attributes preventing layout shift; no changes needed"
     }
   ],
-  "tools_used": ["Read", "Edit"]
+  "tools_used": ["Read", "Edit", "Write", "Bash"]
 }
